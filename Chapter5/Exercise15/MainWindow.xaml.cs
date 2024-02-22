@@ -24,5 +24,32 @@ namespace Exercise15
         {
             InitializeComponent();
         }
+
+        public void ConvertSecondsToHoursMinutesSeconds(int totalSeconds, out int hours, out int minutes, out int seconds)
+        {
+            if (totalSeconds == 0)
+            {
+                hours = 0;
+                minutes = 0;
+                seconds = 0;
+            } else
+            {
+                hours = totalSeconds / 3600; // 1 hour = 3600 seconds
+                minutes = (totalSeconds % 3600) / 60; // 1 minute = 60 seconds
+                seconds = totalSeconds % 60;
+            }
+
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            int totalSeconds = Convert.ToInt32(secondsTextBox.Text);
+            int hours, minutes, seconds;
+
+
+            ConvertSecondsToHoursMinutesSeconds(totalSeconds, out hours, out minutes, out seconds);
+            MessageBox.Show($"{totalSeconds} seconds is {hours} hours, {minutes} minutes and {seconds} seconds");
+        }
     }
 }

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml;
 
 namespace Exercise14
 {
@@ -24,5 +25,22 @@ namespace Exercise14
         {
             InitializeComponent();
         }
+
+
+
+        private String ConvertNumberToBinary(int number)
+        {
+            var binaryString = "";
+
+            binaryString = $"{number:B}";
+
+            return binaryString;
+        }
+
+        private void convertButton_Click(object sender, RoutedEventArgs e)
+        {
+            numberLabel.Content = ConvertNumberToBinary(Convert.ToInt32(numberTextBox.Text));
+        }
     }
+
 }
