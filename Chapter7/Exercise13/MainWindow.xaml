@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Label Content="Netto Prijs" HorizontalAlignment="Left" Margin="92,66,0,0" VerticalAlignment="Top" Width="83"/>
+        <Label Content="BTW" HorizontalAlignment="Left" Margin="96,141,0,0" VerticalAlignment="Top"/>
+        <Label Content="Totaal:" HorizontalAlignment="Left" Margin="96,187,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="priceLabel" HorizontalAlignment="Left" Margin="244,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <CheckBox Name="rateCheckBox" Content="Verlaagd tarief" HorizontalAlignment="Left" Margin="253,109,0,0" VerticalAlignment="Top"/>
+        <TextBox IsReadOnly="True" Name="btwLabel" HorizontalAlignment="Left" Margin="253,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox IsReadOnly="True" Name="totalTextBox" HorizontalAlignment="Left" Margin="253,195,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Name="calculateButton"  Content="Bereken" HorizontalAlignment="Left" Margin="100,254,0,0" VerticalAlignment="Top" Click="calculateButton_Click"/>
+
     </Grid>
 </Window>
