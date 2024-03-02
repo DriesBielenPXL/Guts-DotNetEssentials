@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
+        <Canvas HorizontalAlignment="Center" Height="260" VerticalAlignment="Center" Width="450"
+        Name="paperCanvas" Background="LightGray">
+            </Canvas>
+
 
     </Grid>
 </Window>
