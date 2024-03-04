@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
- 
+        <Label Name="firstLabel" Content="" HorizontalAlignment="Left" Margin="102,94,0,0" VerticalAlignment="Top"/>
+        <Label Name="secondLabel" Content="" HorizontalAlignment="Left" Margin="273,107,0,0" VerticalAlignment="Top"/>
+        <Button Name="firstButton" Content="Button 1" HorizontalAlignment="Left" Margin="107,182,0,0" VerticalAlignment="Top" Click="firstButton_Click"/>
+        <Button Name="secondButton" Content="Button 2" HorizontalAlignment="Left" Margin="306,187,0,0" VerticalAlignment="Top" Click="secondButton_Click"/>
+
     </Grid>
 </Window>

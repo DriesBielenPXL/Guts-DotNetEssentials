@@ -7,6 +7,24 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-      
+        <Label Name="lastnameLabel" Content="Naam:" HorizontalAlignment="Left" Margin="72,59,0,0" VerticalAlignment="Top" Width="106"/>
+        <Label Name="firstnameLabel" Content="Voornaam:" HorizontalAlignment="Left" Margin="72,90,0,0" VerticalAlignment="Top" Width="106"/>
+        <TextBox Name="lastnameTextBox" HorizontalAlignment="Left" Margin="219,67,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="firstnameTextBox" HorizontalAlignment="Left" Margin="219,98,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <GroupBox Name="genderGroupBox" Header="Geslacht" Margin="64,129,207,167">
+            <Grid>
+                <RadioButton Name="maleRadioButton" Content="Man" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                <RadioButton Name="femaleRadioButton" Content="Vrouw" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Name="ageGroupBox" Header="Leeftijd" Margin="64,187,207,32">
+            <Grid>
+                <RadioButton Name="firstRadioButton" Content="Tussen 18 en 30" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <RadioButton Name="secondRadioButton" Content="Tussen 30 en 45" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,34,0,0"/>
+                <RadioButton Name="thirdradioButton" Content="Tussen 45 en 60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,54,0,0"/>
+                <RadioButton Name="lastRdioButton" Content="ouder dan 60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,74,0,0"/>
+            </Grid>
+        </GroupBox>
+        <Button Name="calculateButton" Content="Bereken" HorizontalAlignment="Left" Margin="351,259,0,0" VerticalAlignment="Top" Click="calculateButton_Click"/>
     </Grid>
 </Window>
