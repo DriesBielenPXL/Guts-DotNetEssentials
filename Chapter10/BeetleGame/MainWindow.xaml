@@ -9,18 +9,26 @@
         Title="ExtraoefeningH10" Height="650" Width="950">
 
     <Grid>
-        
+
         <Label Content="Speed cm/s" HorizontalAlignment="Left" Height="24" Margin="37,68,0,0" VerticalAlignment="Top" Width="93"/>
         <Label Name="speedLabel" Content="0.5" HorizontalAlignment="Left" Height="24" Margin="462,64,0,0" VerticalAlignment="Top" Width="44"/>
         <Label Content="Size in pixels" HorizontalAlignment="Left" Margin="37,146,0,0" VerticalAlignment="Top"/>
-        
+
         <Label Content="10" HorizontalAlignment="Left" 
                Name="sizeLabel" Margin="470,138,0,0" VerticalAlignment="Top"/>
         <Canvas HorizontalAlignment="Left" Height="356" 
                 Name ="paperCanvas" Background ="LightGray" Margin="47,218,0,0" VerticalAlignment="Top" Width="536"/>
-        
+
 
         <Label Name="messageLabel" Content="" HorizontalAlignment="Left" Height="61" Margin="616,513,0,0" VerticalAlignment="Top" Width="218"/>
+        <Slider Name="speedSlider" Minimum="0.5"  HorizontalAlignment="Left" Margin="130,68,0,0" VerticalAlignment="Top" Width="327" Height="24"/>
+        <Slider Name="sizeSlider" IsSnapToTickEnabled="True" TickFrequency="2" Minimum="10" Maximum="20" HorizontalAlignment="Left" Margin="130,151,0,0" VerticalAlignment="Top" Width="327" Height="24"/>
+        <Button Name="startButton" Content="Start" HorizontalAlignment="Left" Margin="725,105,0,0" VerticalAlignment="Top" Width="63"/>
+        <Button Name="resetButton" Content="Reset" HorizontalAlignment="Left" Margin="725,182,0,0" VerticalAlignment="Top" Width="63"/>
+        <Button Name="upButton" Content="UP" HorizontalAlignment="Left" Margin="722,317,0,0" VerticalAlignment="Top" Width="66"/>
+        <Button Name="leftButton" Content="Left" HorizontalAlignment="Left" Margin="616,362,0,0" VerticalAlignment="Top" Width="66"/>
+        <Button Name="rightButton" Content="Right" HorizontalAlignment="Left" Margin="822,362,0,0" VerticalAlignment="Top" Width="66"/>
+        <Button Name="downButton" Content="Down" HorizontalAlignment="Left" Margin="724,413,0,0" VerticalAlignment="Top" Width="66"/>
 
 
     </Grid>
