@@ -7,5 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
+        <TextBox Name="sizeTextBox" HorizontalAlignment="Left" Margin="112,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="tableTextBox" IsReadOnly="true" TextWrapping="NoWrap" IsEnabled="true" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="auto" HorizontalAlignment="Left" Margin="112,176,0,0" Text="" VerticalAlignment="Top" Width="232" Height="84">
+        </TextBox>
+        <Button Name="generateButton" Content="Generate" HorizontalAlignment="Left" Margin="277,59,0,0" VerticalAlignment="Top" Click="generateButton_Click"/>
     </Grid>
 </Window>

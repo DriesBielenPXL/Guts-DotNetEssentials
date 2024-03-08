@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +25,31 @@ namespace Exercise07
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void generateButton_Click(object sender, RoutedEventArgs e)
+        {
+            int number = Convert.ToInt32(sizeTextBox.Text);
+
+            StringBuilder builder = new StringBuilder();
+
+            for (int i = 1; i <= number; i++)
+            {
+                builder.Append("\t" + i);
+            }
+            builder.AppendLine();
+
+            for (int i = 1; i <= number; i++)
+            {
+                builder.Append("\n" + i + "\t");
+
+                for (int j = 1; j <= number; j++)
+                {
+                    builder.Append(i * j + "\t");
+                }
+            }
+
+            tableTextBox.Text = builder.ToString();
         }
     }
 }
