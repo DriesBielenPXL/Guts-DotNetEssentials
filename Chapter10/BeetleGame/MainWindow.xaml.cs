@@ -22,12 +22,10 @@ namespace BeetleGame
             InitializeComponent();
             _timer.Tick += _timer_Tick;
 
-            GenerateLocation(out int x, out int y);
-            _beetle = new Beetle(paperCanvas, x, y, (int)sizeSlider.Value);
-
-
             _timer.Interval = TimeSpan.FromMilliseconds(200);
 
+            GenerateLocation(out int x, out int y);
+            _beetle = new Beetle(paperCanvas, x, y, (int)sizeSlider.Value);
             sizeSlider.ValueChanged += SizeSlider_ValueChanged;
             speedSlider.ValueChanged += SpeedSlider_ValueChanged;
         }
@@ -59,7 +57,7 @@ namespace BeetleGame
             {
                 startButton.Content = "Start";
                 _timer.Stop();
-                messageLabel.Content = Convert.ToString($"total distance in meters: {_beetle.ComputeDistance(_startTime, DateTime.Now)}");
+                messageLabel.Content = $"total distance in meters: {_beetle.ComputeDistance(_startTime, DateTime.Now)}";
                 speedSlider.IsEnabled = true;
                 sizeSlider.IsEnabled = true;
             }
@@ -68,15 +66,15 @@ namespace BeetleGame
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
-            if (button.Name == "upButton")
+            if (sender == upButton)
             {
                 _beetle.Up = true;
             }
-            else if (button.Name == "downButton")
+            else if (sender == downButton)
             {
                 _beetle.Up = false;
             }
-            else if (button.Name == "rightButton")
+            else if (sender == rightButton)
             {
                 _beetle.Right = true;
             }

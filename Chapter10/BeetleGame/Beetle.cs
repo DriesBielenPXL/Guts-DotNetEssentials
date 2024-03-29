@@ -12,7 +12,7 @@ namespace BeetleGame
         private int _y;
         private int _size;
         private Ellipse _ellipse;
-        private bool _isVisible = false;
+        private bool _isVisible;
         private Canvas _canvas;
 
         public Beetle(Canvas canvas, int x, int y, int size)
@@ -22,13 +22,12 @@ namespace BeetleGame
             _canvas = canvas;
             _size = size;
             CreateEllipse();
-            _isVisible = false;
             Up = true;
             Right = true;
         }
 
         public double Speed { get; set; }
-        public int Size { get { return _size; } set { _size = value; } }
+        public int Size { get { return _size; } set { _size = value; UpdateEllipse(); } }
         public bool Up { get; set; }
         public bool Right { get; set; }
         public int X { get { return _x; } set { _x = value; UpdateEllipse(); } }
