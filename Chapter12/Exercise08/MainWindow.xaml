@@ -15,10 +15,17 @@
         	Text="c:" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="26,142,0,0"
         	Text="Opp:" VerticalAlignment="Top"/>
-        
+        <TextBlock Name="areaTextBlock" HorizontalAlignment="Left" Margin="57,145,0,0"
+        	Text="" VerticalAlignment="Top" Width="48"/>
+        <TextBlock Name="errorTextBlock" HorizontalAlignment="Left" Margin="282,66,0,0"
+        	Text="" VerticalAlignment="Top" Width="80" Height="100"/>
+
         <Button Content="Bereken" HorizontalAlignment="Left"
                 Margin="140,24,0,0" VerticalAlignment="Top" Width="75"
                 Click="Button_Click"/>
-        
+        <TextBox Name="asideTextBox" HorizontalAlignment="Left" Margin="39,26,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
+        <TextBox Name="bsideTextBox" HorizontalAlignment="Left" Margin="39,57,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
+        <TextBox Name="csideTextBox" HorizontalAlignment="Left" Margin="39,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
+
     </Grid>
 </Window>

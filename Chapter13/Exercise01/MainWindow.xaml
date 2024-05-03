@@ -8,6 +8,16 @@
         Title="MainWindow" Height="350" Width="525"
         AutomationProperties.AutomationId="Window_13_1">
     <Grid>
-        
+        <ListBox Name="listBox" Margin="98,52,99,74" SelectionChanged="listBox_SelectionChanged">
+            <ListBoxItem>Kerstin Nys</ListBoxItem>
+            <ListBoxItem>Kita Lambrechts</ListBoxItem>
+            <ListBoxItem>Carine Derkoningen</ListBoxItem>
+            <ListBoxItem>Nele Custers</ListBoxItem>
+            <ListBoxItem>Jan Willekens</ListBoxItem>
+            <ListBoxItem>Sam Vannderstraeten</ListBoxItem>
+            <ListBoxItem>Ingrid Vanherwegen</ListBoxItem>
+            <ListBoxItem>Heidi Tans</ListBoxItem>
+        </ListBox>
+
     </Grid>
 </Window>
