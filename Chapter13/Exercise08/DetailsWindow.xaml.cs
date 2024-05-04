@@ -37,14 +37,14 @@ namespace Exercise08
             phoneTextBox.Text = _person.Phone ?? string.Empty;
             if (_person.BirthDate != default)
             {
-                birthDateTextBox.Text = _person.BirthDate.ToString();
+                birthDateTextBox.Text = _person.BirthDate.ToShortDateString();
             }
 
-            if (_person.Gender == "Male")
+            if (_person.Gender == Gender.Male)
             {
                 maleRadioButton.IsChecked = true;
             }
-            else if (_person.Gender == "Female")
+            else if (_person.Gender == Gender.Female)
             {
                 femaleRadioButton.IsChecked = true;
             }
@@ -65,11 +65,11 @@ namespace Exercise08
 
             if (maleRadioButton.IsChecked == true)
             {
-                _person.Gender = "Male";
+                _person.Gender = Gender.Male;
             }
             else if (femaleRadioButton.IsChecked == true)
             {
-                _person.Gender = "Female";
+                _person.Gender = Gender.Female;
             }
 
             Close();

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <ListBox Name="listBox" Margin="98,52,99,74" SelectionChanged="listBox_SelectionChanged">
+        <ListBox Name="listBox" Margin="98,52,99,74" MouseDoubleClick="listBox_MouseDoubleClick">
         </ListBox>
     </Grid>
 </Window>

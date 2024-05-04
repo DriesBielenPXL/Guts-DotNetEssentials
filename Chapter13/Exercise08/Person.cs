@@ -10,12 +10,12 @@ namespace Exercise08
     {
         public string Name { get; set; }
         public string Firstname { get; set; }
-        public string Gender { get; set; }
+        public Gender Gender { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
         public DateTime BirthDate { get; set; }
 
-        public Person(string name, string firstname, string gender, string address, string phone, DateTime birthDate)
+        public Person(string name, string firstname, Gender gender, string address, string phone, DateTime birthDate)
         {
             Name = name;
             Firstname = firstname;

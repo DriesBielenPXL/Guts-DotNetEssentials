@@ -13,14 +13,14 @@ namespace Exercise08
         public MainWindow()
         {
             InitializeComponent();
-            Person dries = new Person("Bielen", "Dries", "man", "Thuis", "0468212699", DateTime.Parse("01/09/2004"));
-            Person charlotte = new Person("Bielen", "charlotte", "man", "Thuis", "0468212699", DateTime.Parse("10/04/2004"));
+            Person dries = new Person("Bielen", "Dries", Gender.Male, "Thuis", "0468212699", DateTime.Parse("01/09/2004"));
+            Person charlotte = new Person("Bielen", "charlotte", Gender.Female, "Thuis", "0468212699", DateTime.Parse("10/04/2004"));
             _persons.Add(dries);
             _persons.Add(charlotte);
             listBox.ItemsSource = _persons;
         }
 
-        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void listBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             Person person = listBox.SelectedItem as Person;
             _detailsWindow = new DetailsWindow(person);
