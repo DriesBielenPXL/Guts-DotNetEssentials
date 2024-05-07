@@ -24,7 +24,7 @@ namespace Exercise08
         {
             Person person = listBox.SelectedItem as Person;
             _detailsWindow = new DetailsWindow(person);
-            _detailsWindow.Show();
+            _detailsWindow.ShowDialog();
         }
     }
 }

@@ -31,14 +31,11 @@ namespace Exercise08
 
         private void LoadPersonDetails()
         {
-            firstnameTextBox.Text = _person.Firstname ?? string.Empty;
-            nameTextBox.Text = _person.Name ?? string.Empty;
-            addressTextBox.Text = _person.Address ?? string.Empty;
-            phoneTextBox.Text = _person.Phone ?? string.Empty;
-            if (_person.BirthDate != default)
-            {
-                birthDateTextBox.Text = _person.BirthDate.ToShortDateString();
-            }
+            firstnameTextBox.Text = _person.Firstname;
+            nameTextBox.Text = _person.Name;
+            addressTextBox.Text = _person.Address;
+            phoneTextBox.Text = _person.Phone;
+            birthDateTextBox.Text = _person.BirthDate.ToShortDateString();
 
             if (_person.Gender == Gender.Male)
             {
@@ -77,6 +74,7 @@ namespace Exercise08
 
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
+            LoadPersonDetails();
             this.Close();
         }
     }
