@@ -75,7 +75,6 @@ namespace Exercise08
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
             LoadPersonDetails();
-            this.Close();
         }
     }
 }

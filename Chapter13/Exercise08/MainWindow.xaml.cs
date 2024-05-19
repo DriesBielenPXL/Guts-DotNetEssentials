@@ -14,7 +14,7 @@ namespace Exercise08
         {
             InitializeComponent();
             Person dries = new Person("Bielen", "Dries", Gender.Male, "Thuis", "0468212699", DateTime.Parse("01/09/2004"));
-            Person charlotte = new Person("Bielen", "charlotte", Gender.Female, "Thuis", "0468212699", DateTime.Parse("10/04/2004"));
+            Person charlotte = new Person("Bielen", "Charlotte", Gender.Female, "Thuis", "0468212699", DateTime.Parse("10/04/2004"));
             _persons.Add(dries);
             _persons.Add(charlotte);
             listBox.ItemsSource = _persons;
