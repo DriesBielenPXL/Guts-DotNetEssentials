@@ -10,32 +10,32 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="File">
-                <MenuItem Header="_Open" Name="openItem" />
+                <MenuItem Header="_Open" Name="openItem" Click="openItem_Click" />
                 <MenuItem Header="_Save" Name="saveItem" IsEnabled="False"/>
                 <Separator />
                 <MenuItem Header="E_xit" Name="exitItem"  />
             </MenuItem>
         </Menu>
         <Grid DockPanel.Dock="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
             <TextBlock HorizontalAlignment="Left" Margin="38,18,0,0" Text="Accounts:" VerticalAlignment="Top"/>
             <ListBox HorizontalAlignment="Left" Height="157" Margin="38,39,0,0"
                       VerticalAlignment="Top" Width="170"
-                      Name="accountInfoListBox">
-
-            </ListBox>
+                      Name="accountInfoListBox" SelectionChanged="accountInfoListBox_SelectionChanged"/>
             <Button HorizontalAlignment="Left" IsEnabled="False"
                     Margin="178,201,0,0" VerticalAlignment="Top"
                     Width="30" Height="30"
                     FontSize="24" Padding="0"
                     HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                    Name="newAccountInfoButton">
+                    Name="newAccountInfoButton" Click="newAccountInfoButton_Click">
                 <TextBlock Text="+" Margin="0,-7,0,0"/>
             </Button>
             <Canvas HorizontalAlignment="Left" Height="158" Margin="254,38,0,0"
                     VerticalAlignment="Top" Width="350"
                     Background="White"
-                    Name="detailsCanvas">
-            </Canvas>
+                    Name="detailsCanvas"/>
 
             <TextBlock HorizontalAlignment="Left" Margin="261,40,0,0" Text="Title:" VerticalAlignment="Top"/>
             <TextBlock HorizontalAlignment="Left" Margin="261,75,0,0" Text="Username:" VerticalAlignment="Top"/>
@@ -47,10 +47,10 @@
                        Name="titleTextBlock" VerticalAlignment="Top" Text="(Title)"/>
             <TextBlock HorizontalAlignment="Left" Margin="370,75,0,0"
                        Name="usernameTextBlock" VerticalAlignment="Top" Text="(username)"/>
-            
+
             <Button Content="Copy" HorizontalAlignment="Left" Margin="370,106,0,0"
                     VerticalAlignment="Top" Width="75" Name="copyButton"
-                    IsEnabled="False"/>
+                    IsEnabled="False" Click="copyButton_Click"/>
 
             <TextBlock HorizontalAlignment="Left" Margin="370,145,0,0"
                        Name="notesTextBlock" VerticalAlignment="Top" Text="(notes)" Width="184" Height="34"

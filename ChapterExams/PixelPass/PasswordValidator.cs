@@ -13,7 +13,34 @@ namespace PixelPass
 
         public static Strength CalculateStrength(string password)
         {
-            return Strength.Weak;
+            if (string.IsNullOrEmpty(password))
+            {
+                return Strength.Weak;
+            }
+
+            int length = password.Length;
+            bool hasLower = password.Contains(alfabetSmallCaps);
+            bool hasUpper = password.Contains(alfabetUpperCaps);
+            bool hasDigit = password.Contains(digits);
+
+            int charTypes = 0;
+
+            if (hasLower) charTypes++;
+            if (hasUpper) charTypes++;
+            if (hasDigit) charTypes++;
+
+            if (length < 5)
+            {
+                return Strength.Weak;
+            }
+            if (charTypes >= 3 && length >= 10)
+            {
+                return Strength.Strong;
+            }
+            if (charTypes == 1 ) {
+                return Strength.Weak;
+            }
+            return Strength.Average;
         }
     }
 

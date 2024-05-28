@@ -18,7 +18,7 @@
         <TextBox HorizontalAlignment="Left" Height="23" Margin="132,51,0,0" Text="" VerticalAlignment="Top"
                  Width="150" Name="usernameTextBox"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="132,87,0,0" Text="" VerticalAlignment="Top"
-                 Width="150" Name="passwordTextBox"/>
+                 Width="150" Name="passwordTextBox" TextChanged="passwordTextBox_TextChanged"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="132,122,0,0" Text="" VerticalAlignment="Top"
                  Width="150" Name="notesTextBox"/>
         <Slider HorizontalAlignment="Left" Margin="132,162,0,0" VerticalAlignment="Top"
@@ -29,10 +29,10 @@
                    Name="expirationDateTextBlock"/>
         <TextBlock HorizontalAlignment="Left" Margin="300,94,0,0" Text="(weak/average/strong)"
             VerticalAlignment="Top"
-            x:Name="passwordStrengthTextBlock"/>
+            Name="passwordStrengthTextBlock"/>
         <Button Content="Create" HorizontalAlignment="Left" Margin="300,220,0,0"
                 VerticalAlignment="Top" Width="75"
-                Name="createButton"/>
+                Name="createButton" Click="createButton_Click"/>
 
     </Grid>
 </Window>
