@@ -64,12 +64,12 @@ namespace PixelPass
                 {
                     _accountInfoCollection = AccountInfoCollectionReader.Read(dialog.FileName);
                     accountInfoListBox.ItemsSource = _accountInfoCollection.AccountInfos;
-                    //accountInfoListBox.Items.Refresh(); enkel als je je lijst wijzigt
+                    //accountInfoListBox.Items.Refresh(); enkel als je je lijst wijzigt niet als je ze toewijst
                     newAccountInfoButton.IsEnabled = true;
                     this.Title = $"Pixelpass - {_accountInfoCollection.Name}";
                 } catch (ParseException ex)
                 {
-                    MessageBox.Show($"{dialog.FileName} seems corrupt.  \n \n Details: \n ]n {ex.Message}", "error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show($"{dialog.FileName} seems corrupt.  \n \n Details: \n \n {ex.Message}", "error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
              }
 
@@ -109,13 +109,12 @@ namespace PixelPass
 
         private void copyButton_Click(object sender, RoutedEventArgs e)
         { 
-            
-                Clipboard.SetText(_currentAccountInfo.Password);
-                copyButton.IsEnabled = false;
-                _remainingSeconds = CopyDurationSeconds;
-                expirationProgressBar.Maximum = CopyDurationSeconds;
-                expirationProgressBar.Value = CopyDurationSeconds;
-                _copyTimer.Start();
+            Clipboard.SetText(_currentAccountInfo.Password);
+            copyButton.IsEnabled = false;
+            _remainingSeconds = CopyDurationSeconds;
+            expirationProgressBar.Maximum = CopyDurationSeconds;
+            expirationProgressBar.Value = CopyDurationSeconds;
+            _copyTimer.Start();
         }
     }
 }
